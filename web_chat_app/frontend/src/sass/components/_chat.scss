@@ -1,0 +1,99 @@
+.col-9 {
+  .right-side {
+    height: 100%;
+    .row {
+      height: 100%;
+      .col-8 {
+        transition: all 0.5s;
+        .message-send-show {
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          height: 100vh;
+          border-right: 1px solid var(--border-color);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .header {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+              rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0.6rem;
+            border-bottom: 0.06rem solid var(--border-color);
+            .image-name {
+              display: flex;
+              .image {
+                position: relative;
+                width: 2.5rem;
+                height: 2.5rem;
+
+                img {
+                  width: 2.5rem;
+                  height: 2.5rem;
+                  border-radius: 50%;
+                }
+                .active-icon {
+                  position: absolute;
+                  width: 0.6rem;
+                  height: 0.6rem;
+                  border-radius: 50%;
+                  background-color: rgb(28, 212, 28);
+                  right: 0;
+                  bottom: 0;
+                }
+              }
+              .name {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h3 {
+                  padding-left: 0.6rem;
+                  color: var(--text-color);
+                }
+              }
+            }
+            .icons {
+              display: flex;
+              .icon {
+                height: 2.1rem;
+                width: 2.1rem;
+                border-radius: 50%;
+                margin-left: 0.5rem;
+                border-radius: 1.5rem;
+                color: var(--icon-color);
+                cursor: pointer;
+                background-color: var(--icon-bg-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                label {
+                  display: flex;
+                  margin-bottom: 0px;
+                  cursor: pointer;
+                  color: var(--icon-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #dot {
+      display: none;
+    }
+    #dot:checked ~ .row .col-4 {
+      display: none;
+    }
+    #dot:checked ~ .row .col-8 {
+      width: 100%;
+    }
+    #dot:checked ~ .row .col-8 .message-show .my-message .my-text {
+      width: 35.25rem;
+    }
+    #dot:checked ~ .row .col-8 .message-show .friend-message .friend-text {
+      width: 35.25rem;
+    }
+  }
+}
